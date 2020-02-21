@@ -26,10 +26,10 @@ public class totalUniqueEmails{
             // account for "+"
             userEmailAfter = userEmailBefore[0].split("\\+"); 
             
-            // remove periods, add to total
+            // remove periods
             userEmailAfter[0] = userEmailAfter[0].replace(".", "");
             
-            // concatenate the @ and original domain
+            // concatenate the processed username, @, and original domain
             unique.add(userEmailAfter[0] + "@" + userEmailBefore[1]); 
         }
         return unique.size();
